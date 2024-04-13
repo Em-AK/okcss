@@ -6,35 +6,33 @@
       name="description"
       content="OK.css is a classless CSS framework that adds sensible styling defaults to your web page."
     />
-    <meta property="og:title" content="OK.css" />
-    <meta property="og:url" content="https://okcss.netlify.app" />
+    <meta property="og:title" content="OK.css (emak's remix)" />
     <meta property="og:type" content="website" />
     <meta
       property="og:description"
       content="OK.css is a classless CSS framework that adds sensible styling defaults to your web page."
     />
     <meta property="twitter:card" content="summary" />
-    <meta property="twitter:title" content="OK.css" />
-    <meta property="twitter:url" content="https://okcss.netlify.app" />
+    <meta property="twitter:title" content="OK.css (emak's remix)" />
     <meta
       property="twitter:description"
       content="OK.css is a classless CSS framework that adds sensible styling defaults to your web page."
     />
-    <title>OK.css</title>
-    <link rel="stylesheet" href="./ok.min.css" />
+    <title>OK.css (emak's remix)</title>
+    <link rel="stylesheet" href="./dist/ok.min.css" />
   </head>
   <body>
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/demo">Demo</a></li>
-        <li><a href="https://github.com/andrewh0/okcss">Contribute</a></li>
+        <li><a href="https://github.com/em-ak/okcss">Contribute</a></li>
       </ul>
     </nav>
     <main>
       <article>
         <header>
-          <h1><span aria-hidden="true" role="presentation">🆗 </span>OK.css</h1>
+          <h1><span aria-hidden="true" role="presentation">🆗 </span>OK.css <ins>(emak's remix)</ins></h1>
         </header>
         <section>
           <p>
@@ -50,13 +48,13 @@
           <p>
             To use it, you can
             <a
-              href="https://cdn.jsdelivr.net/gh/andrewh0/okcss@1/dist/ok.min.css"
+              href="https://cdn.jsdelivr.net/gh/em-ak/okcss/dist/ok.min.css"
               >download the CSS file directly</a
             >
             or add the following line to your HTML <code>&lt;head&gt;</code>:
           </p>
           <pre>
-&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/andrewh0/okcss@1/dist/ok.min.css" /&gt;</pre
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/em-ak/okcss/dist/ok.min.css" /&gt;</pre
           >
           <p>
             <b>OK.css</b> is somewhere between a CSS normalizer and a
@@ -89,13 +87,25 @@
               >.
             </li>
             <li>
-              adopts <a href="https://rsms.me/inter/">Inter</a> as its primary
-              font family.
+              <del>
+                adopts <a href="https://rsms.me/inter/">Inter</a> as its primary
+                font family.
+              </del>
+              <ul>
+                <li>
+                  <ins>
+                    does not load any remote font.
+                  </ins>
+                </li>
+              </ul>
             </li>
             <li>
               uses a
               <a href="https://spec.fm/specifics/8-pt-grid">base-8</a> rem/em
               spacing and sizing for harmonious vertical rhythm.
+            </li>
+            <li>
+              <ins>uses a generous line height to increase reading comfort</ins>
             </li>
             <li>
               is compliant with the
@@ -105,6 +115,13 @@
               >
               recommendation to use a <b>4.5:1</b> contrast ratio or higher for
               primary text and background colors.
+              <ul>
+                <li>
+                  <ins>
+                    but uses soft contrasts to look less aggressive.
+                  </ins>
+                </li>
+              </ul>
             </li>
             <li>
               toggles <b>dark and light</b> themes automatically based on
@@ -172,6 +189,9 @@
       Made by
       <a href="https://twitter.com/andrewlho_codes">@andrewlho_codes</a> in
       2020.
+      <ins>
+        Remixed by <a href="https://github.com/em-ak">@em-ak</a> in 2024.
+      </ins>
     </footer>
   </body>
 </html>

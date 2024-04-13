@@ -1,6 +1,5 @@
+/*! OK.css v1.2.0-emak.1 | MIT License | github.com/em-ak/okcss */
 /*! OK.css v1.2.0 | MIT License | github.com/andrewh0/okcss */
-
-@import url("https://rsms.me/inter/inter.css");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -363,8 +362,8 @@ template {
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
-  --ok-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Ubuntu Mono",
-    "Liberation Mono", "Courier New", Courier, monospace;
+  --ok-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Noto Sans Mono",
+    "Ubuntu Mono", "Liberation Mono", "Courier New", Courier, monospace;
 
   /* font-weight */
   /* body */
@@ -400,11 +399,12 @@ template {
   /* ================================== */
 
   /* line heights */
-  --ok-lh-body: 1.5;
+  --ok-lh-body: 1.6;
   --ok-lh-heading: 1.25;
 
   /* text highlight background color */
-  --ok-t-hl: #ffcf30;
+  --ok-t-hl: #fae19d;
+  --ok-tc-hl: #333;
 
   /* button backgrounds */
   --ok-accent-0: #3e67fa;
@@ -417,7 +417,8 @@ template {
   --ok-tc-code: #c23a30;
 
   /* primary text color */
-  --ok-tc-0: #000000;
+  --ok-tc-00: #222;
+  --ok-tc-0: #444;
   /* secondary text color */
   --ok-tc-1: #747474;
   /* tertiary text color (for disabled fields, placeholder text) */
@@ -427,6 +428,8 @@ template {
   --ok-bg-0: #ffffff;
   --ok-bg-1: #f0f0f0;
   --ok-bg-2: #cccccc;
+  --ok-bg-red: #ffebe9;
+  --ok-bg-green: #e6ffec;
 
   /* border */
   --ok-b-0: 1px solid #cbcbcb;
@@ -446,13 +449,18 @@ template {
   :root {
     --ok-tc-accent: #5c9aff;
     --ok-tc-code: #ed5853;
-    --ok-tc-0: #ffffff;
-    --ok-tc-1: #ababab;
-    --ok-tc-2: #929292;
+    --ok-tc-00: #dedede;
+    --ok-tc-0: #cacaca;
+    --ok-tc-1: #8a8a8a;
+    --ok-tc-2: #6b6b6b;
+    --ok-t-hl: #826517;
+    --ok-tc-hl: #ebebeb;
 
     --ok-bg-0: #000000;
     --ok-bg-1: #212121;
     --ok-bg-2: #3e3e3e;
+    --ok-bg-red: #f8514980;
+    --ok-bg-green: #2ea04380;
 
     --ok-b-0: 1px solid #747474;
     --ok-b-1: 1px solid #929292;
@@ -579,6 +587,7 @@ h6 {
   font-weight: var(--ok-fw-3);
   margin-top: var(--ok-s-6);
   margin-bottom: var(--ok-s-3);
+  color: var(--ok-tc-00);
 }
 
 h1 + *,
@@ -593,6 +602,7 @@ hr + * {
 
 p {
   font-size: var(--ok-fs-4);
+  margin-bottom: var(--ok-s-3);
 }
 
 small {
@@ -603,6 +613,7 @@ b,
 strong,
 dt {
   font-weight: var(--ok-fw-2);
+  color: var(--ok-tc-00);
 }
 
 /* https://csswizardry.com/2012/06/single-direction-margin-declarations/ */
@@ -630,7 +641,6 @@ hr,
 main,
 nav,
 ol,
-p,
 pre,
 section,
 summary,
@@ -1317,8 +1327,22 @@ figcaption {
 mark {
   padding: 0.2em 0.4em;
   background: var(--ok-t-hl);
-  color: #000000;
+  color: var(--ok-tc-hl);
   border-radius: var(--ok-br);
+}
+
+del, ins {
+  text-decoration-thickness: 0.2em;
+}
+
+del {
+  text-decoration-color: #ff625380;
+  background-color: var(--ok-bg-red);
+}
+
+ins {
+  text-decoration-color: #52b66ab0;
+  background-color: var(--ok-bg-green);
 }
 
 iframe {
